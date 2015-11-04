@@ -22,7 +22,8 @@ button {
     text-transform: uppercase;
 }
 .hovered {
-    background-color: blue;
+    background-color: #005;
+    opacity: 0;
 }
 td {
     margin: -2px;

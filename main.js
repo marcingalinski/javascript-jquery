@@ -5,6 +5,10 @@ var size = 16;
 var paint = function () {
     $('td').on('mouseenter', function () {
         $(this).addClass('hovered');
+        var opacity = +$(this).css('opacity') + 0.1;
+        if (opacity < 1){
+            $(this).css('opacity', opacity);
+        }
     } );
 };
 
@@ -28,7 +32,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     $('button').on('click', function () {
-        var size = prompt('size of a grid', size);
+        size = prompt('size of a grid', size);
         makeGrid(size, size);
     } );
 } );
