@@ -9,18 +9,20 @@ var paint = function () {
 };
 
 var makeGrid = function ( rows, cols) {
-    $('table').children().remove();
+    var table = $('#table');
+    table.children().remove();
     for (i = 1; i <= rows; i++) {
-        jQuery('table').append('<tr></tr>');
+        table.append('<tr></tr>');
     }
+    var row = $('tr');
     for (i = 1; i <= cols; i++) {
-        jQuery('tr').append('<td></td>');
+        row.append('<td></td>');
     }
     paint();
 };
 
 $(document).ready(function() {
-    $('#container').append('<table></table>');
+    $('#container').append('<table id="table"></table>');
     makeGrid(size, size);
 } );
 
